@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santhosh | VFX Artist</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'Inter',sans-serif;
+}
+
+.gradient{
+    background: linear-gradient(90deg,#00d1ff,#7000ff,#ff007a);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* slider */
+.slider{
+    display:flex;
+    overflow-x:auto;
+    gap:20px;
+    scroll-snap-type:x mandatory;
+    padding-bottom:20px;
+}
+.slider::-webkit-scrollbar{ display:none; }
+
+.card{
+    min-width:300px;
+    height:200px;
+    background:#111;
+    border-radius:16px;
+    overflow:hidden;
+    scroll-snap-align:start;
+    transition:0.4s;
+    position:relative;
+}
+
+.card:hover{
+    transform:scale(1.07) translateY(-5px);
+    box-shadow:0 30px 80px rgba(112,0,255,0.5);
+}
+
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0.7;
+}
+
+/* buttons */
+.btn{
+    padding:12px 28px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* fade animation */
+.fade-in{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 1s ease;
+}
+
+.fade-in.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* nav hover */
+nav a{
+    position:relative;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    width:0%;
+    height:2px;
+    background:#7000ff;
+    left:0;
+    bottom:-4px;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="flex justify-between px-10 py-6">
+<h1 class="text-2xl font-bold">SANTHOSH<span class="text-purple-500">.</span></h1>
+
+<div class="flex gap-8 text-sm">
+<a href="#work">WORK</a>
+<a href="#skills">SKILLS</a>
+<a href="#contact">CONTACT</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="h-screen flex flex-col justify-center items-center text-center px-6 fade-in">
+
+<h1 class="text-5xl md:text-7xl font-bold">
+GURUSANTHOSAM R
+</h1>
+
+<p class="text-xl md:text-2xl mt-4 gradient font-semibold">
+Compositor • 3D Generalist • VFX Artist
+</p>
+
+<div class="flex gap-4 mt-8">
+<a href="#work" class="btn bg-white text-black">VIEW WORK</a>
+
+<a href="resume.pdf" target="_blank" 
+class="btn border border-white text-white hover:bg-white hover:text-black transition">
+RESUME
+</a>
+</div>
+
+</section>
+
+<!-- WORK -->
+<section id="work" class="px-10 py-20 fade-in">
+
+<h2 class="text-3xl mb-10">Selected Work</h2>
+
+<div class="slider">
+
+<a href="#" class="card">
+<img src="your_render1.jpg">
+<div class="absolute bottom-4 left-4">
+<p class="text-sm font-semibold">CG Integration Shot</p>
+<p class="text-xs text-gray-400">Matchmove • Lighting • Comp</p>
+</div>
+</a>
+
+<a href="#" class="card">
+<img src="your_render2.jpg">
+<div class="absolute bottom-4 left-4">
+<p class="text-sm font-semibold">Green Screen Composite</p>
+<p class="text-xs text-gray-400">Keying • Despill • Grading</p>
+</div>
+</a>
+
+<a href="#" class="card">
+<img src="your_render3.jpg">
+<div class="absolute bottom-4 left-4">
+<p class="text-sm font-semibold">3D Environment</p>
+<p class="text-xs text-gray-400">Model • Texture • Render</p>
+</div>
+</a>
+
+</div>
+
+</section>
+
+<!-- SHOWREEL -->
+<section class="text-center py-20 fade-in">
+
+<h2 class="text-3xl mb-6">Showreel</h2>
+
+<iframe width="80%" height="400"
+src="https://www.youtube.com/embed/VIDEO_ID"
+frameborder="0" allowfullscreen>
+</iframe>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="text-center py-20 fade-in">
+
+<h2 class="text-3xl mb-10">Skills</h2>
+
+<div class="flex flex-wrap justify-center gap-6 text-sm">
+
+<span class="px-6 py-3 bg-[#111] rounded-full">Nuke</span>
+<span class="px-6 py-3 bg-[#111] rounded-full">Houdini</span>
+<span class="px-6 py-3 bg-[#111] rounded-full">Maya</span>
+<span class="px-6 py-3 bg-[#111] rounded-full">DaVinci Resolve</span>
+<span class="px-6 py-3 bg-[#111] rounded-full">Compositing</span>
+<span class="px-6 py-3 bg-[#111] rounded-full">Rotoscoping</span>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="text-center max-w-2xl mx-auto py-20 px-6 fade-in">
+
+<h2 class="text-3xl mb-6">About</h2>
+
+<p class="text-gray-400">
+I'm Santhosh, a VFX artist focused on compositing and 3D.
+I specialize in integrating CG seamlessly into live-action footage,
+creating cinematic and realistic visuals.
+</p>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="text-center py-20 fade-in">
+
+<h2 class="text-3xl mb-6">Contact</h2>
+
+<p class="text-gray-400">gurusanthosam@email.com</p>
+
+<div class="mt-4 flex justify-center gap-6 text-sm">
+<a href="#">LinkedIn</a>
+<a href="#">YouTube</a>
+</div>
+
+</section>
+
+<footer class="text-center text-gray-600 py-6 text-sm">
+© 2026 Santhosh
+</footer>
+
+<!-- ANIMATION SCRIPT -->
+<script>
+const elements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+},{ threshold:0.2 });
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
